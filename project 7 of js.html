@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+</head>
+<body>
+    <div id="randomnumbers"></div>
+
+    <script>
+        // Get the container element
+        const container = document.getElementById('randomnumbers');
+
+        // Initialize a counter
+        let count = 0;
+
+        // Use a while loop to generate and display 10 random numbers
+        while (count < 10) {
+            // Generate a random number between 1 and 100
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+            // Create a new paragraph element
+            const p = document.createElement('p');
+
+            // Set the text content to the random number
+            p.textContent = randomNumber;
+
+            // Append the paragraph to the container
+            container.appendChild(p);
+
+            // Increment the counter
+            count++;
+        }
+    </script>
+</body>
+</html>
